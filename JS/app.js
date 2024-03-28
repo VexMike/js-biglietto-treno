@@ -19,7 +19,8 @@ console.log(prezzoBase, typeof prezzoBase)
 
 // - calcolare lo sconto
 
-let sconto // undefined  /*Posso applicare lo sconto = 0 e togliere l'else finale, il risultato non cambia //number */
+let sconto // undefined  
+/*Posso applicare lo sconto = 0 e togliere l'else finale, il risultato non cambia //number */
 
 // -- SE età passeggero <18 = sconto 20%
 
@@ -36,12 +37,14 @@ if (eta < 18) {
 // - calcolare il prezzo finale = prezzo base - sconto
 // Stampare il prezzo con 2 cifre decimali
 
-const prezzo = prezzoBase - sconto; // numebr  /*Possiamo ottimizzare con prezzoBase * sconto aggiungendo sconto = 0 e togliento tutti i prezzoBase dall'if ed else*/
-console.log(prezzo.toFixed(2), typeof prezzo, prezzo)
+const prezzoFinale = prezzoBase - sconto; // numebr  
+/*Possiamo ottimizzare con prezzoBase * sconto aggiungendo sconto = 0 
+e togliento tutti i prezzoBase dall'if ed else*/
+console.log(prezzoFinale.toFixed(2), typeof prezzoFinale, prezzoFinale)
 
 // Bonus: stampare biglietto nell'HTML con un tag 'p'
 
 const prezzoElemento = document.getElementById('prezzo'); 
 // console.log(prezzoElemento)
-prezzoElemento.innerHTML = 'Prezzo del biglietto: ' + prezzo.toFixed(2) + '&euro;'
+prezzoElemento.innerHTML = 'Prezzo del biglietto: ' + prezzoFinale.toFixed(2) + '&euro;'
 
